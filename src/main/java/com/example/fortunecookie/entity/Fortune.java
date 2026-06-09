@@ -18,7 +18,12 @@ public class Fortune {
     @Column(nullable = false, length = 500)
     private String message;
 
-    public Fortune(String message) {
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private FortuneCategory category;
+
+    public Fortune(String message, FortuneCategory category) {
         this.message = message;
+        this.category = category;
     }
 }
