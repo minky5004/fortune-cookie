@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS fortune (
+    id      BIGSERIAL    PRIMARY KEY,
+    message VARCHAR(500) NOT NULL
+);
