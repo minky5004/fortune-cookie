@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 포춘쿠키</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <h1 class="title">🥠 오늘의 포춘쿠키</h1>
+            <p class="subtitle">쿠키를 깨서 오늘의 운세를 확인해 보세요</p>
+        </header>
+
+        <main class="main">
+            <!-- 쿠키 영역 -->
+            <div class="cookie-scene">
+                <div class="cookie-container" id="cookieContainer">
+                    <div class="cookie-glow"></div>
+                    <span class="cookie-emoji" id="cookieEmoji">🥠</span>
+<div class="particles-container" id="particlesContainer"></div>
+                </div>
+                <p class="click-hint" id="clickHint">쿠키를 클릭해서 깨세요!</p>
+            </div>
+
+            <!-- 운세 결과 -->
+            <div class="fortune-result" id="fortuneResult">
+                <div class="fortune-card">
+                    <div class="fortune-icon">✨</div>
+                    <p class="fortune-message" id="fortuneMessage"></p>
+                </div>
+            </div>
+
+            <!-- 이미 열었을 때 -->
+            <div class="already-opened" id="alreadyOpened">
+                <div class="moon-icon">🌙</div>
+                <p class="already-text">오늘의 운세는 이미 확인했어요</p>
+                <p class="already-sub">내일 다시 찾아오세요</p>
+                <div class="fortune-card already-card">
+                    <div class="fortune-icon">✨</div>
+                    <p class="fortune-message" id="savedMessage"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>매일 자정에 새로운 운세가 기다립니다</p>
+        </footer>
+    </div>
+
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
