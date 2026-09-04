@@ -51,3 +51,9 @@ logs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+### Claude ###
+CLAUDE.md
+.claude/
+.claude-*/
+.mcp.json
